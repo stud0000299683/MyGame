@@ -133,7 +133,7 @@ export class Player {
        let damage = Math.floor(this.getDamage(distance)); // Вычисляем урон
        if (distance === 0) {
            enemy.move(1); //Если на оба игрока на одной позиции то соперник отскакивает на один ход
-           this.log(`${this.shortInfo} соперники слишком близко усиление урона`);
+           this.log(`${this.shortInfo} соперники слишком близко усиление урона`,'purple', './images/doble_damage.png');
            damage *= 2; // Увеличиваем урон вдвое
        }
        enemy.takeAttack(damage); // Наносим урон врагу

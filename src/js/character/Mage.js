@@ -28,7 +28,7 @@ export class Mage extends Player {
             const reducedDamage = damage / 2; // Уменьшаем урон вдвое
             this.magic -= 12; // Тратим магию
             super.takeDamage(reducedDamage); // Наносим уменьшенный урон
-            this.log(`${this.shortInfo} использует магию для уменьшения урона до ${reducedDamage}.`);
+            this.log(`${this.shortInfo} использует магию для уменьшения урона до ${reducedDamage}.`, 'purple', './images/magic_shield.png');
         } else {
             super.takeDamage(damage); // Наносим полный урон
         }
