@@ -28,7 +28,7 @@ export class Demourge extends Mage {
         const baseDamage = super.getDamage(distance); // Получаем базовый урон от родительского класса
         if (this.magic > 0 && this.getLuck() > 0.6) { // Увеличиваем урон на 50%, если условия выполнены
             const boostedDamage = baseDamage * 1.5;
-            this.log(`${this.shortInfo} использует магию для увеличения урона до ${boostedDamage}.`);
+            this.log(`${this.shortInfo} использует магию для увеличения урона до ${boostedDamage}.`, 'purple', './images/magic_up.jpg');
             return boostedDamage;
         }
         return baseDamage; // Возвращаем базовый урон, если условия не выполнены
